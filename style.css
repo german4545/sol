@@ -1,0 +1,184 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    overflow: hidden; /* Disable scrolling */
+  }
+  
+  /* Video Container */
+  .video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Keep the video behind other content */
+  }
+  
+  video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover; /* Ensure the video scales correctly */
+  }
+  
+  /* Centered Box */
+  .centered-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 500px;
+    background-color: #374151; /* Semi-transparent background */
+    border-radius: 15px;
+    text-align: center;
+    padding: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid white;
+  }
+  
+  .centered-box h2 {
+    font-family: Arial, sans-serif;
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  /* Form Field */
+  .form-field {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding: 6px 8px;
+    margin: 20px 0;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    gap: 8px;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    overflow: hidden;
+  }
+  
+  .email-icon {
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+  }
+  
+  .email-input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #6b7280;
+    background-color: transparent;
+  }
+  
+  .submit-button {
+    background: none;
+    border: none;
+    color: green;
+    font-family: Arial, sans-serif;
+    font-size: 12px; /* Slightly reduced font size */
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: -5px; /* Move button to the left */
+    padding: 0 6px;
+    text-align: left;
+    transition: color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    color: darkgreen;
+  }
+  
+  /* Divider */
+  .divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .divider .line {
+    flex: 1;
+    height: 1px;
+    background-color: #ccc;
+  }
+  
+  .divider .or-text {
+    margin: 0 10px;
+    font-family: Arial, sans-serif;
+    color: white;
+    font-size: 14px;
+  }
+  
+  /* Phantom Button */
+  .phantom-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background-color: lightgrey;
+    color: black;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+  }
+  
+  .phantom-button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .phantom-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 600px) {
+    .form-field {
+      padding: 4px 6px; /* Reduce padding for small screens */
+    }
+  
+    .submit-button {
+      font-size: 10px; /* Adjust for small screens */
+      margin-left: -8px; /* Fine-tune left shift */
+    }
+  
+    .email-input {
+      font-size: 12px;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .form-field {
+      padding: 4px 6px; /* Reduce padding for small screens */
+    }
+  
+    .submit-button {
+      font-size: 10px; /* Adjust for small screens */
+      margin-left: -8px; /* Fine-tune left shift */
+    }
+  
+    .email-input {
+      font-size: 12px;
+    }
+  }
+  
